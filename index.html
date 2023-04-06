@@ -70,9 +70,9 @@
                 <button type="button" class="btn btn-labeled btn-dark btn-lg">
                     <span class="btn-label"><i class="fa-solid fa-file-pdf"></i></span>Paper
                 </button>
-                <button type="button" class="btn btn-labeled btn-dark btn-lg">
+                <a href="https://github.com/hminle/gamut-mlp" type="button" class="btn btn-labeled btn-dark btn-lg">
                     <span class="btn-label"><i class="fa-brands fa-github"></i></span>Code
-                </button>
+                </a>
                 <button type="button" class="btn btn-labeled btn-dark btn-lg">
                     <span class="btn-label"><i class="fa-sharp fa-solid fa-images"></i></i></span>Dataset
                 </button>
@@ -85,6 +85,7 @@
                     <div class="col-lg-8">
                         <h2 class="text-center fw-bolder">Abtract</h2>
                         <p class="lead">Cameras and image-editing software often process images in the wide-gamut ProPhoto color space, encompassing 90% of all visible colors. However, when images are encoded for sharing, this color-rich representation is transformed and clipped to fit within the small-gamut standard RGB (sRGB) color space, representing only 30% of visible colors. Recovering the lost color information is challenging due to the clipping procedure. Inspired by neural implicit representations for 2D images, we propose a method that optimizes a lightweight multi-layer-perceptron (MLP) model during the gamut reduction step to predict the clipped values. GamutMLP takes approximately 2 seconds to optimize and requires only 23 KB of storage. The small memory footprint allows our GamutMLP model to be saved as metadata in the sRGB image---the model can be extracted when needed to restore wide-gamut color values. We demonstrate the effectiveness of our approach for color recovery and compare it with alternative strategies, including pre-trained DNN-based gamut expansion networks and other implicit neural representation methods. As part of this effort, we introduce a new color gamut dataset of 2200 wide-gamut/small-gamut images for training and testing.</p>
+                        <img class="img-fluid" src="figures\figure1_teaser_updated.png" alt="teaser">
                     </div>
                 </div>
             </div>
@@ -107,7 +108,13 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2 class="text-center fw-bolder">Our method</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                        <h5>Gamut Reduction</h5>
+                        <p class="lead">An overview of the gamut reduction stage in our framework. This phase shows the gamut reduction step, where the wide-gamut ProPhoto is converted to the small-gamut sRGB. While saving the sRGB image, an MLP is optimized based on the original and clipped ProPhoto color values. The MLP is embedded in the sRGB image as metadata.</p>
+                        <img class="img-fluid" src="figures\figure2_overview_A.png" alt="overview_A">
+                        <br>
+                        <h5>Gamut Expansion</h5>
+                        <p class="lead">An overview of the gamut expansion phase in our framework. In particular, the MLP network is extracted and used to recover the clipped ProPhoto values.</p>
+                        <img class="img-fluid" src="figures\figure2_overview_B.png" alt="overview_B">
                     </div>
                 </div>
             </div>
@@ -154,7 +161,7 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2 class="text-center fw-bolder">Acknowledgements</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <p class="lead">This study was funded in part by the Canada First Research Excellence Fund for the Vision: Science to Applications (VISTA) program, an NSERC Discovery Grant, and an Adobe Gift Award.</p>
                     </div>
                 </div>
             </div>
