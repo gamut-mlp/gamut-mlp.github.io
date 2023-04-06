@@ -1,9 +1,172 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>GamutMLP</title>
 
-<h1>GamutMLP</h1>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
 
 
-</body>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">GamutMLP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#abstract">Abstract</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#problem">Problem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#method">Method</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#bibtex">BibTex</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-light bg-gradient text-black">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">GamutMLP</h1>
+                <h2>A Lightweight MLP for Color Loss Recovery</h2>
+            </div>
+            <br>
+            <div class="container px-2 text-center h5">
+                <span>
+                    <a href="https://hminle.com/">Hoang M. Le</a>
+                    <sup>1</sup>
+                    , 
+                </span>
+                <span>
+                    <a href="https://www.brianpricephd.com/">Brian Price</a>
+                    <sup>2</sup>
+                    , 
+                </span>
+                <span>
+                    <a href="https://research.adobe.com/person/scott-cohen/">Scott Cohen</a>
+                    <sup>2</sup>
+                    , 
+                </span>
+                <span>
+                    <a href="http://www.cse.yorku.ca/~mbrown/">Michael S. Brown</a>
+                    <sup>1</sup>
+                </span>
+            </div>
+            <br>
+            <div class="container px-2 text-center h5">
+                <span><sup>1</sup>York University, Canada</span>
+                <br>
+                <span><sup>2</sup>Adobe Research</span>
+            </div>
+            <br>
+            <div class="container text-center">
+                <button type="button" class="btn btn-labeled btn-dark btn-lg">
+                    <span class="btn-label"><i class="fa-solid fa-file-pdf"></i></span>Paper
+                </button>
+                <button type="button" class="btn btn-labeled btn-dark btn-lg">
+                    <span class="btn-label"><i class="fa-brands fa-github"></i></span>Code
+                </button>
+                <button type="button" class="btn btn-labeled btn-dark btn-lg">
+                    <span class="btn-label"><i class="fa-sharp fa-solid fa-images"></i></i></span>Dataset
+                </button>
+            </div>
+        </header>
+        <!-- About section-->
+        <section id="abstract">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center fw-bolder">Abtract</h2>
+                        <p class="lead">Cameras and image-editing software often process images in the wide-gamut ProPhoto color space, encompassing 90% of all visible colors. However, when images are encoded for sharing, this color-rich representation is transformed and clipped to fit within the small-gamut standard RGB (sRGB) color space, representing only 30% of visible colors. Recovering the lost color information is challenging due to the clipping procedure. Inspired by neural implicit representations for 2D images, we propose a method that optimizes a lightweight multi-layer-perceptron (MLP) model during the gamut reduction step to predict the clipped values. GamutMLP takes approximately 2 seconds to optimize and requires only 23 KB of storage. The small memory footprint allows our GamutMLP model to be saved as metadata in the sRGB image---the model can be extracted when needed to restore wide-gamut color values. We demonstrate the effectiveness of our approach for color recovery and compare it with alternative strategies, including pre-trained DNN-based gamut expansion networks and other implicit neural representation methods. As part of this effort, we introduce a new color gamut dataset of 2200 wide-gamut/small-gamut images for training and testing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Problem section-->
+        <section class="bg-light" id="problem">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center fw-bolder">Problem</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Method section-->
+        <section id="method">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center fw-bolder">Our method</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Results section-->
+        <section class="bg-light" id="results">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center fw-bolder">Results</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- BibTex section-->
+        <section id="bibtex">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center fw-bolder">BibTex</h2>
+                        <div class="bg-code">
+                            <pre><code>@article{hoang2023gamutmlp,
+    author    = {Le, Hoang M. and Price, Brian and Cohen, Scott and Brown, Michael S.},
+    title     = {GamutMLP: A Lightweight MLP for Color Loss Recovery},
+    journal   = {CVPR},
+    year      = {2023},
+}</code></pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Acknowledgements section-->
+        <section class="bg-light" id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center fw-bolder">Acknowledgements</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; GamutMLP 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://kit.fontawesome.com/92311cf8c4.js" crossorigin="anonymous"></script>
+    </body>
 </html>
