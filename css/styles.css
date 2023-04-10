@@ -10837,8 +10837,8 @@ header {
 }
 
 section {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .btn-label {
@@ -10864,3 +10864,4 @@ section {
   --bs-bg-opacity: 1;
   background-color: rgba(194,194,194, var(--bs-bg-opacity)) !important;
 }
+
