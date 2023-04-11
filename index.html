@@ -82,7 +82,7 @@
         <section id="abstract">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <h2 class="text-center fw-bolder">Abtract</h2>
                         <p class="lead">Cameras and image-editing software often process images in the wide-gamut ProPhoto color space, encompassing 90% of all visible colors. However, when images are encoded for sharing, this color-rich representation is transformed and clipped to fit within the small-gamut standard RGB (sRGB) color space, representing only 30% of visible colors. Recovering the lost color information is challenging due to the clipping procedure. Inspired by neural implicit representations for 2D images, we propose a method that optimizes a lightweight multi-layer-perceptron (MLP) model during the gamut reduction step to predict the clipped values. GamutMLP takes approximately 2 seconds to optimize and requires only 23 KB of storage. The small memory footprint allows our GamutMLP model to be saved as metadata in the sRGB image---the model can be extracted when needed to restore wide-gamut color values. We demonstrate the effectiveness of our approach for color recovery and compare it with alternative strategies, including pre-trained DNN-based gamut expansion networks and other implicit neural representation methods. As part of this effort, we introduce a new color gamut dataset of 2200 wide-gamut/small-gamut images for training and testing.</p>
                         <br>
@@ -94,7 +94,11 @@
                         <br>
                         <h5>Our approach</h5>
                         <br>
-                        <img class="img-fluid" src="figures\figure1_teaser_updated.png" alt="teaser">
+                        <div class="row gx-4 justify-content-center">
+                            <div class="col-lg-8">
+                                <img class="img-fluid" src="figures\figure1_teaser_updated.png" alt="teaser">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,7 +147,7 @@
         <section id="results">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <h2 class="text-center fw-bolder">Results</h2>
                         <img class="img-fluid" src="figures\result_1.png" alt="result_1">
                         <br>
@@ -165,7 +169,7 @@
         <section id="bibtex">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <h2 class="text-center fw-bolder">BibTex</h2>
                         <div class="bg-code">
                             <pre><code>@inproceedings{hoangle2023GamutMLP,
@@ -186,7 +190,7 @@
         <section class="bg-light" id="contact">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <h2 class="text-center fw-bolder">Acknowledgements</h2>
                         <p class="lead">This study was funded in part by the Canada First Research Excellence Fund for the Vision: Science to Applications (VISTA) program, an NSERC Discovery Grant, and an Adobe Gift Award.</p>
                     </div>
