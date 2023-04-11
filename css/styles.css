@@ -10865,3 +10865,10 @@ section {
   background-color: rgba(194,194,194, var(--bs-bg-opacity)) !important;
 }
 
+/* video {
+  object-fit: fill;
+} */
+video {
+  width: 100%;
+  height: auto;
+}
